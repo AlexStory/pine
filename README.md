@@ -19,6 +19,14 @@ Returns the numbers added together
 
 `add(2, 3) == 5`
 
+
+### chunkEvery
+#### `chunkEvery<T>(count: number, list: T[]): T[][]`
+Chunks the list by `count` excess are thrown away
+
+`chunkEvery(2, [1, 2, 3, 4, 5]) == [[1, 2], [3, 4]]
+
+
 ### clamp
 #### `clamp(min: number, max: number, value: number): number`
 
@@ -69,16 +77,38 @@ Returns the function with the arguments reversed
 
 
 ### fold
-### `fold<T, U>(fn: (acc: U, x: T) => U, acc: U, list: T[]): U`
+#### `fold<T, U>(fn: (acc: U, x: T) => U, acc: U, list: T[]): U`
 Takes a reducer, an initial accumulator value, and a list of items. Applies the function on the accumulator, and each item of the list as it iterates through and returns the final accumulator.
 
 `fold(add, 0, [1, 2, 3]) == 6`
+
+
+### frequencies
+#### `frequencies<T>(list: <T>): Map<T, number>`
+Returns a frequency table created from the list, in a Map data structure
+
+`frequencies([1, 1, 2, 2, 2], Map{ 1: 2, 2: 3})`
+
+
+### hasKey
+#### `hasKey(key: keyof any, obj: Object): boolean`
+Returns wether the object has the given key
+
+`hasKey("x", {x: 1}) == true`
+
 
 ### head 
 #### `head<T>(list: T[]): T`
 Returns the first item in a `list`
 
 `head([1, 2, 3]) == 1` 
+
+
+### identity
+#### `identity<T>(item: T): T1
+Returns the item passed in
+
+`identity(5) == 5`
 
 
 ### inc
@@ -132,6 +162,21 @@ Returns the length of the `list`
 Applies a function to each item in a list, returning a new list of the results of each call
 
 
+### mapGet
+#### `mapGet<K, V>(key: K, map: Map<K, V>): V`
+Returns the value for the key `key` on the map. Throws an error if the key is not found
+
+
+### mapHas
+#### `mapHas<K, V>(key: K, map: Map<K, V>): boolean`
+Returns whether a map has the given key
+
+
+### mapSet
+#### `mapSet<K, V>(key: K, value: V, Map<K, V>): Map<K, V>`
+Returns a new map based off the one passed in with the key `key` set to `value`
+
+
 ### max
 #### `max(x: number, y: number): number`
 Returns the larger of two numbers
@@ -150,6 +195,17 @@ Returns the largest item in the `list`
 Returns the smaller of two numbers
 
 `min(2, 4) == 2`
+
+
+### minBy
+#### `minBy<T>(fn: (item: T) => T, x: T, y: T): T
+Returns the smaller of originals from applying the function to both items
+
+```ts
+const first = { x: 4 }
+const second = { x: 5}
+minBy(o => o.x, first, second) == first
+```
 
 
 ### minimum
@@ -232,6 +288,7 @@ Returns the last `count` items from a `list`
 Returns elements of the list until it first gets a false value from the predicate. Does not return the value that returned false
 
 `takeWhile(x => x < 2, [1, 1, 1, 3]) == [1, 1, 1]`
+
 
 ## TODO:
 - more tests
