@@ -20,6 +20,7 @@ export { maximum } from "./maximum.ts";
 export { min } from "./min.ts";
 export { minimum } from "./minimum.ts";
 export { not } from "./not.ts";
+export { range } from "./range.ts";
 export { reduce } from "./reduce.ts";
 export { reverse } from "./reverse.ts";
 export { scan } from "./scan.ts";

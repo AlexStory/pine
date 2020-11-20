@@ -159,6 +159,13 @@ Returns the opposite of the applied boolean
 `not(true) == false`
 
 
+### range
+### `range(start: number, stop: number): number[]`
+Returns an array of numbers from `start` to `stop` inclusive
+
+`range(1, 3) == [1, 2, 3]`
+
+
 ### reduce
 ### `reduce<T>(fn: (x: T, y: T) => T, list: T[]): T`
 Shorthand for call to `fold` where the initial value is the first item of the list, and iterates through the rest of the list
