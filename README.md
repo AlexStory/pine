@@ -71,6 +71,13 @@ Returns the smaller of two numbers
 `min(2, 4) == 2`
 
 
+### minimum
+#### `minimum(list: number[]): number`
+Returns the smallest item in the array
+
+`minimum([1, 2, 3]) == ``
+
+
 ### reduce
 ### `reduce<T>(fn: (x: T, y: T) => T, list: T[]): T`
 Shorthand for call to `fold` where the initial value is the first item of the list, and iterates through the rest of the list

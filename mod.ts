@@ -7,6 +7,7 @@ export { length } from "./length.ts";
 export { map } from "./map.ts";
 export { max } from "./max.ts";
 export { min } from "./min.ts";
+export { minimum } from "./minimum.ts";
 export { reduce } from "./reduce.ts";
 export { reverse } from "./reverse.ts";
 export { tail } from "./tail.ts";
