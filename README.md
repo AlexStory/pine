@@ -19,6 +19,16 @@ Returns the function with the arguments reversed
 #### `head<T>(list: T[]): T`
 Returns the first item in a `list`
  
+
+### length
+#### `length<T>(list: T[]): number`
+Returns the length of the `list`
+
+
+### reverse
+#### `reverse<T>(list: T[]): T[]`
+Returns the `list` in the reversed order
+
 ### take
 #### `take<T>(n: number, list: T[]): T[]`
 Returns the first `n` items from a `list`

@@ -1,3 +1,3 @@
 export function head<T>(list: T[]): T {
-    return list[0]
+  return list[0];
 }
