@@ -21,7 +21,7 @@ Returns the numbers added together
 
 ### clamp
 #### `clamp(min: number, max: number, value: number): number`
-Returns the value within the bounds set by `min` and `max` (both inclusive)
+
 
 `clamp(0, 10, 20) == 10`
 
@@ -214,10 +214,17 @@ Returns all items after the first in a list
 
 
 ### take
-#### `take<T>(n: number, list: T[]): T[]`
-Returns the first `n` items from a `list`
+#### `take<T>(count: number, list: T[]): T[]`
+Returns the first `count` items from a `list`
 
 `take(2, [1, 2, 3, 4, 5]) == [1, 2]`
+
+
+### takeLast
+#### `takeLast<T>(count: number, list: T[]): T[]`
+Returns the last `count` items from a `list`
+
+`takeLast(2, [1, 2, 3, 4, 5]) == [4, 5]`
 
 
 ### takeWhile
@@ -231,7 +238,6 @@ Returns elements of the list until it first gets a false value from the predicat
 - automatic currying
 - Option/Result types
 - more tests
-- redo logic for map and length
 - more tests
 - better way to handle type of functions
 
