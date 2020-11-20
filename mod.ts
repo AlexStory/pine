@@ -7,4 +7,5 @@ export { map } from "./map.ts";
 export { max } from "./max.ts";
 export { min } from "./min.ts";
 export { reverse } from "./reverse.ts";
+export { tail } from "./tail.ts";
 export { take } from "./take.ts";

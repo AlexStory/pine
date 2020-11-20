@@ -70,6 +70,13 @@ Returns the `list` in the reversed order
 
 `reverse([1, 2, 3]) == [3, 2, 1]`
 
+
+### tail
+### `tail<T>(list: T[]); T[]`
+Returns all items after the first in a list
+`tail([1, 2, 3]) == [2, 3]`
+
+
 ### take
 #### `take<T>(n: number, list: T[]): T[]`
 Returns the first `n` items from a `list`
