@@ -2,7 +2,7 @@
 
 Utility library for deno with an FP bent.
 
-You should be able to pull all functions straight from mod like `import { take } from "https://denopkg.com/alexstory/pine/mod.ts`
+You should be able to pull all functions straight from mod like `import { take } from "https://denopkg.com/alexstory/pine/mod.ts"`
 
 I highly recommend looking at the test file for a function to see how to use it.
 
