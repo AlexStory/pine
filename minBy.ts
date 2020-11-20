@@ -6,5 +6,5 @@
  * @returns {T} 
  */
 export function minBy<T>(fn: (item: T) => number, x: T, y: T): T {
-    return fn(x) < fn(y) ? x : y;
+  return fn(x) < fn(y) ? x : y;
 }

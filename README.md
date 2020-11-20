@@ -290,6 +290,13 @@ Returns elements of the list until it first gets a false value from the predicat
 `takeWhile(x => x < 2, [1, 1, 1, 3]) == [1, 1, 1]`
 
 
+### zip
+#### `zip<T, U>(first: T[], second: U[]): [T, U][]`
+Zips two arrays together into an array of tuples. Extra items from the longer will be ignored
+
+`zip([1, 2, 3, 4], ["a", "b", "c"]) == [[1, "a"], [2, "b"], [3, "c"]]`
+
+
 ## TODO:
 - more tests
 - automatic currying
