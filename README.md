@@ -95,6 +95,13 @@ Runs a function for every item in the list supplying the index, and the item as 
 `indexMap((i, item) => i + item, [5, 5, 5]) == [5, 6, 7]`
 
 
+### isEmpty
+#### `isEmpty<T>(list: T[]): boolean`
+Returns wether the given `list` is empty
+
+`isEmpty([]) == true`
+
+
 ### isEven
 #### `isEven(n: number): boolean`
 Returns wether the given number is even
@@ -167,10 +174,17 @@ Returns an array of numbers from `start` to `stop` inclusive
 
 
 ### reduce
-### `reduce<T>(fn: (x: T, y: T) => T, list: T[]): T`
+#### `reduce<T>(fn: (x: T, y: T) => T, list: T[]): T`
 Shorthand for call to `fold` where the initial value is the first item of the list, and iterates through the rest of the list
 
 `reduce(add, [1, 2, 3]) == 6`
+
+
+### repeat
+#### `repeat<T>(count: number, item: T): T[]`
+Returns an array of `count` length with `item` repeated
+
+`repeat(3, "apple") == ["apple", "apple", "apple"]
 
 
 ### reverse

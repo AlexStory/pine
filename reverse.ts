@@ -1,5 +1,8 @@
-import { length } from "./mod.ts";
-
+/**
+ * Returns the reverse order of a list
+ * @param {T[]}list
+ * @returns {T[]} 
+ */
 export function reverse<T>(list: T[]): T[] {
   const results = [];
 

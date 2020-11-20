@@ -1,5 +1,10 @@
 import { enumerate, length } from "./mod.ts";
 
+/**
+ * Returns every item after the head of an array
+ * @param {T[]} list
+ * @returns {T[]} 
+ */
 export function tail<T>(list: T[]): T[] {
   const results = [];
 
