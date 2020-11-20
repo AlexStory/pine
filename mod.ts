@@ -39,5 +39,5 @@ export { t } from "./t.ts";
 export { tail } from "./tail.ts";
 export { take } from "./take.ts";
 export { takeLast } from "./takeLast.ts";
-export { takeWhile } from "./takewhile.ts";
+export { takeWhile } from "./takeWhile.ts";
 export { zip } from "./zip.ts";
