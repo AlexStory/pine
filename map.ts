@@ -1,3 +1,8 @@
 export function map<T, U>(fn: (x: T) => U, list: T[]): U[] {
-  return list.map(fn);
+  const results = [];
+  for (const item of list) {
+    results.push(fn(item));
+  }
+
+  return results;
 }

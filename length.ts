@@ -1,3 +1,7 @@
 export function length<T>(list: T[]): number {
-  return list.length;
+  let count = 0;
+  for (const item of list) {
+    count++;
+  }
+  return count;
 }
