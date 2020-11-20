@@ -6,13 +6,13 @@ Deno.test("repeat works", () => {
 });
 
 Deno.test("repeat once works", () => {
-    assertEquals(repeat(1, 3), [3]);
-})
+  assertEquals(repeat(1, 3), [3]);
+});
 
 Deno.test("repeating zero time is empty", () => {
-    assertEquals(repeat(0, "apple"), [])
-})
+  assertEquals(repeat(0, "apple"), []);
+});
 
 Deno.test("repeat negative times throws", () => {
-    assertThrows(() => repeat(-1, 3));
-})
+  assertThrows(() => repeat(-1, 3));
+});

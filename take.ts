@@ -11,7 +11,7 @@ export function take<T>(count: number, list: T[]): T[] {
 
   for (const item of list) {
     if (length(results) < count) {
-     results.push(item) ;
+      results.push(item);
     } else {
       break;
     }

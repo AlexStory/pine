@@ -6,5 +6,5 @@ import { length } from "./mod.ts";
  * @returns {boolean}
  */
 export function isEmpty<T>(list: T[]): boolean {
-    return length(list) == 0
+  return length(list) == 0;
 }

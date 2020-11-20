@@ -1,4 +1,5 @@
 export { add } from "./add.ts";
+export { chunkEvery } from "./chunkEvery.ts";
 export { clamp } from "./clamp.ts";
 export { dec } from "./dec.ts";
 export { enumerate } from "./enumerate.ts";
@@ -29,4 +30,5 @@ export { scan } from "./scan.ts";
 export { t } from "./t.ts";
 export { tail } from "./tail.ts";
 export { take } from "./take.ts";
+export { takeLast } from "./takeLast.ts";
 export { takeWhile } from "./takewhile.ts";
