@@ -21,9 +21,23 @@ Returns the numbers added together
 
 ### clamp
 #### `clamp(min: number, max: number, value: number): number`
-Returs the value within the bounds set by `min` and `max` (both inclusive)
+Returns the value within the bounds set by `min` and `max` (both inclusive)
 
 `clamp(0, 10, 20) == 10`
+
+
+### dec
+#### `dec(n: number): number`
+Returns one less than `n`
+
+`dec(3) == 2`
+
+
+### first
+#### `first<T>(list: T[]): T[]`
+Returns all items in the array except the last one
+`first([1, 2, 3]) == [1, 2]`
+
 
 ### flip
 #### `flip(fn: Function): Function`
@@ -44,6 +58,17 @@ Returns the first item in a `list`
 
 `head([1, 2, 3]) == 1` 
 
+
+### inc
+#### `inc(n: number): number`
+Returns one higher than `n`
+
+`inc(1) == 2`
+
+### last
+#### `last<T>(list: T[]): T`
+Returns the last item in a `list`
+`last([1, 3, 2]) == 2`
 
 ### length
 #### `length<T>(list: T[]): number`
@@ -87,7 +112,15 @@ Returns the smallest item in the `list`
 ### reduce
 ### `reduce<T>(fn: (x: T, y: T) => T, list: T[]): T`
 Shorthand for call to `fold` where the initial value is the first item of the list, and iterates through the rest of the list
+
 `reduce(add, [1, 2, 3]) == 6`
+
+
+### scan
+#### `scan<T, U>(fn: (x: T) => U, init: U, list: T[]): U[]`
+Iterates over the `list` in the same way as `fold`, but saves all steps along the way.
+
+`scan(add, 0, [1, 2, 3]) == [0, 1, 3, 6]`
 
 
 ### reverse
@@ -109,6 +142,12 @@ Returns the first `n` items from a `list`
 
 `take(2, [1, 2, 3, 4, 5]) == [1, 2]`
 
+
+### takeWhile
+#### `takeWhile<T>(pred: (T) => boolean, list: T[]): T[]`
+Returns elements of the list until it first gets a false value from the predicate. Does not return the value that returned false
+
+`takeWhile(x => x < 2, [1, 1, 1, 3]) == [1, 1, 1]`
 
 ## TODO:
 - more tests
