@@ -17,3 +17,9 @@ Deno.test("take will only return available values", function () {
     take(5, nums),
   );
 });
+
+Deno.test("Taking less than one returns an empty list", () => {
+  const nums = [1, 2, 3];
+  assertEquals([], take(0, nums));
+  assertEquals([], take(-1, nums))
+})
