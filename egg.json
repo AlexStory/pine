@@ -1,0 +1,19 @@
+{
+  "name": "pine",
+  "entry": "./mod.ts",
+  "description": "Utility library for deno with a functional bent",
+  "homepage": "https://github.com/alexstory/pine",
+  "version": "0.0.2",
+  "unstable": true,
+  "files": [
+    "./readme.md"
+  ],
+  "checkFormat": true,
+  "checkTests": true,
+  "checkInstallation": false,
+  "check": true,
+  "repository": "https://github.com/alexstory/pine",
+  "releaseType": "patch",
+  "ignore": [],
+  "unlisted": false
+}
