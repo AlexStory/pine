@@ -33,6 +33,14 @@ Returns one less than `n`
 `dec(3) == 2`
 
 
+
+### enumerate
+#### `enumerate<T>(list: T[]): [number, T] []`
+returns an array of tuples having the signature `[index, item]`
+
+`enumerate(['a', 'b', 'c']) == [[0, 'a'], [1, 'b'], [2, 'c']]
+
+
 ### first
 #### `first<T>(list: T[]): T[]`
 Returns all items in the array except the last one
@@ -64,6 +72,14 @@ Returns the first item in a `list`
 Returns one higher than `n`
 
 `inc(1) == 2`
+
+
+### indexMap
+#### `indexMap<T, U>(fn: (i: number, item: T) => U, list: T[]): U`
+Runs a function for every item in the list supplying the index, and the item as arguments
+
+`indexMap((i, item) => i + item, [5, 5, 5]) == [5, 6, 7]`
+
 
 ### last
 #### `last<T>(list: T[]): T`

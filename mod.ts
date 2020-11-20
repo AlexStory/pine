@@ -1,11 +1,13 @@
 export { add } from "./add.ts";
 export { clamp } from "./clamp.ts";
 export { dec } from "./dec.ts";
+export { enumerate } from "./enumerate.ts";
 export { first } from "./first.ts";
 export { flip } from "./flip.ts";
 export { fold } from "./fold.ts";
 export { head } from "./head.ts";
 export { inc } from "./inc.ts";
+export { indexMap } from "./indexMap.ts";
 export { last } from "./last.ts";
 export { length } from "./length.ts";
 export { map } from "./map.ts";
