@@ -1,5 +1,10 @@
 import { enumerate, length } from "./mod.ts";
 
+/**
+ * Returns all but the last item in a list
+ * @param {T[]} list 
+ * @returns {T[]}
+ */
 export function first<T>(list: T[]): T[] {
   const results: T[] = [];
 
