@@ -36,9 +36,23 @@ Returns one less than `n`
 
 ### enumerate
 #### `enumerate<T>(list: T[]): [number, T] []`
-returns an array of tuples having the signature `[index, item]`
+Returns an array of tuples having the signature `[index, item]`
 
-`enumerate(['a', 'b', 'c']) == [[0, 'a'], [1, 'b'], [2, 'c']]
+`enumerate(['a', 'b', 'c']) == [[0, 'a'], [1, 'b'], [2, 'c']]`
+
+
+### f
+#### `f(): boolean`
+Returns false
+
+`f() == false`
+
+
+### filter
+#### `filter<T>(pred: (T) => bool, list: T[]): T[]`
+Returns all items in the list where `T` satisfies `pred`
+
+`filter(isEven, [1, 2, 3, 4]) == [2, 4]`
 
 
 ### first
@@ -81,10 +95,23 @@ Runs a function for every item in the list supplying the index, and the item as 
 `indexMap((i, item) => i + item, [5, 5, 5]) == [5, 6, 7]`
 
 
+### isEven
+#### `isEven(n: number): boolean`
+Returns wether the given number is even
+`isEven(2) == true`
+
+
+### isOdd
+#### `isOdd(n: number): boolean`
+Returns wether the given number is odd
+`isOdd(3) == true`
+
+
 ### last
 #### `last<T>(list: T[]): T`
 Returns the last item in a `list`
 `last([1, 3, 2]) == 2`
+
 
 ### length
 #### `length<T>(list: T[]): number`
@@ -125,11 +152,25 @@ Returns the smallest item in the `list`
 `minimum([1, 2, 3]) == 1
 
 
+### not
+#### `not(b: boolean): boolean`
+Returns the opposite of the applied boolean
+
+`not(true) == false`
+
+
 ### reduce
 ### `reduce<T>(fn: (x: T, y: T) => T, list: T[]): T`
 Shorthand for call to `fold` where the initial value is the first item of the list, and iterates through the rest of the list
 
 `reduce(add, [1, 2, 3]) == 6`
+
+
+### reverse
+#### `reverse<T>(list: T[]): T[]`
+Returns the `list` in the reversed order
+
+`reverse([1, 2, 3]) == [3, 2, 1]`
 
 
 ### scan
@@ -139,11 +180,10 @@ Iterates over the `list` in the same way as `fold`, but saves all steps along th
 `scan(add, 0, [1, 2, 3]) == [0, 1, 3, 6]`
 
 
-### reverse
-#### `reverse<T>(list: T[]): T[]`
-Returns the `list` in the reversed order
-
-`reverse([1, 2, 3]) == [3, 2, 1]`
+### t
+### `t(): boolean`
+Returns true
+`t() == true`
 
 
 ### tail
