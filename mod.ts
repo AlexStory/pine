@@ -1,7 +1,10 @@
-export { add } from "./add.ts"
+export { add } from "./add.ts";
+export { clamp } from "./clamp.ts";
 export { flip } from "./flip.ts";
 export { head } from "./head.ts";
-export { length } from "./length.ts"
-export { map } from "./map.ts"
-export { reverse } from "./reverse.ts"
+export { length } from "./length.ts";
+export { map } from "./map.ts";
+export { max } from "./max.ts";
+export { min } from "./min.ts";
+export { reverse } from "./reverse.ts";
 export { take } from "./take.ts";
