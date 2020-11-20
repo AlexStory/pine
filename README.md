@@ -11,6 +11,7 @@ I highly recommend looking at the test file for a function to see how to use it.
 ### flip
 #### `flip(fn: Function): Function`
 Takes a function with two parameters
+
 Returns the function with the arguments reversed 
 
 
