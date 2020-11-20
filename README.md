@@ -2,7 +2,7 @@
 
 Utility library for deno with an FP bent.
 
-You should be able to pull all functions straight from mod like `import { take } from "https://denopkg.com/alexstory/pine/mod.ts"`
+You should be able to pull all functions straight from mod like `import { take } from "https://deno.land/x/pine/mod.ts"`
 
 I highly recommend looking at the test file for a function to see how to use it.
 
@@ -31,6 +31,12 @@ Takes a function with two parameters
 
 Returns the function with the arguments reversed 
 
+
+### fold
+### `fold<T, U>(fn: (acc: U, x: T) => U, acc: U, list: T[]): U`
+Takes a reducer, an initial accumulator value, and a list of items. Applies the function on the accumulator, and each item of the list as it iterates through and returns the final accumulator.
+
+`fold(add, 0, [1, 2, 3]) == 6`
 
 ### head 
 #### `head<T>(list: T[]): T`
@@ -63,6 +69,13 @@ Returns the larger of two numbers
 Returns the smaller of two numbers
 
 `min(2, 4) == 2`
+
+
+### reduce
+### `reduce<T>(fn: (x: T, y: T) => T, list: T[]): T`
+Shorthand for call to `fold` where the initial value is the first item of the list, and iterates through the rest of the list
+`reduce(add, [1, 2, 3]) == 6`
+
 
 ### reverse
 #### `reverse<T>(list: T[]): T[]`
