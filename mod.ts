@@ -6,6 +6,7 @@ export { head } from "./head.ts";
 export { length } from "./length.ts";
 export { map } from "./map.ts";
 export { max } from "./max.ts";
+export { maximum } from "./maximum.ts";
 export { min } from "./min.ts";
 export { minimum } from "./minimum.ts";
 export { reduce } from "./reduce.ts";

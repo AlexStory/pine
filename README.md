@@ -64,6 +64,12 @@ Returns the larger of two numbers
 `max(2, 4) == 4`
 
 
+### maximum
+#### `max(list: number[]): number`
+Returns the largest item in the `list`
+
+`maximum([1, 2, 3]) = 3`
+
 ### min
 #### `min(x: number, y: number): number`
 Returns the smaller of two numbers
@@ -73,9 +79,9 @@ Returns the smaller of two numbers
 
 ### minimum
 #### `minimum(list: number[]): number`
-Returns the smallest item in the array
+Returns the smallest item in the `list`
 
-`minimum([1, 2, 3]) == ``
+`minimum([1, 2, 3]) == 1
 
 
 ### reduce
