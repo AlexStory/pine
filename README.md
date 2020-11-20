@@ -6,7 +6,17 @@ You should be able to pull all functions straight from mod like `import { take }
 
 I highly recommend looking at the test file for a function to see how to use it.
 
-##functions implemented so far:
+## stability
+Most of the api should be pretty stable, but for now I would pin a version as I am planning to rewrite some of the function implementations, and add things like automatic currying.
+
+
+## functions implemented so far:
+
+
+### add
+#### `add(x: number, y: number): number`
+Returns the numbers added together
+
 
 ### flip
 #### `flip(fn: Function): Function`
@@ -25,6 +35,10 @@ Returns the first item in a `list`
 Returns the length of the `list`
 
 
+### map
+#### `map<T, U>(fn: T => U, list: T[]): U`
+Applies a function to each item in a list, returning a new list of the results of each call
+
 ### reverse
 #### `reverse<T>(list: T[]): T[]`
 Returns the `list` in the reversed order
@@ -32,3 +46,13 @@ Returns the `list` in the reversed order
 ### take
 #### `take<T>(n: number, list: T[]): T[]`
 Returns the first `n` items from a `list`
+
+
+## TODO:
+- more tests
+- automatic currying
+- Option/Result types
+- more tests
+- redo logic for map and length
+- more tests
+- better way to handle type of functions
