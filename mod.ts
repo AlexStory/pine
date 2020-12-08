@@ -3,6 +3,7 @@ export { chunkEvery } from "./chunkEvery.ts";
 export { clamp } from "./clamp.ts";
 export { dec } from "./dec.ts";
 export { enumerate } from "./enumerate.ts";
+export { eq } from "./eq.ts";
 export { f } from "./f.ts";
 export { filter } from "./filter.ts";
 export { first } from "./first.ts";

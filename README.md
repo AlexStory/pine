@@ -41,12 +41,18 @@ Returns one less than `n`
 `dec(3) == 2`
 
 
-
 ### enumerate
 #### `enumerate<T>(list: T[]): [number, T] []`
 Returns an array of tuples having the signature `[index, item]`
 
 `enumerate(['a', 'b', 'c']) == [[0, 'a'], [1, 'b'], [2, 'c']]`
+
+
+### eq
+#### `eq<T>(x: T, y: T): Boolean`
+Returns wether two arguments are equal
+
+`eq(2, 2) === true`
 
 
 ### f
