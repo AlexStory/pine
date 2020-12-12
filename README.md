@@ -327,6 +327,19 @@ Returns the sum of all numbers in `list`
 `sum([1, 2, 3]) === 6`
 
 
+### sumby
+#### `sumBy<T>(fn: (item: T) => number, list: T[]): number`
+Returns the sum of applying `fn` to all items in `list`
+
+```ts
+const first = { x: 1};
+const second = { x: 2};
+const third = { x: 3 };
+const list = [first, second, third];
+sumBy(o => o.x, list) === 6
+```
+
+
 ### t
 ### `t(): boolean`
 Returns true

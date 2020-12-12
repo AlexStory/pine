@@ -5,7 +5,7 @@ import { eq, filter, length } from "./mod.ts";
  * @param {T[]} list 
  * @returns {boolean}
  */
-export function contains<T>(item: T, list: T[]) : boolean {
-    const items = filter(x => eq(x, item), list)
-    return length(items) > 0
+export function contains<T>(item: T, list: T[]): boolean {
+  const items = filter((x) => eq(x, item), list);
+  return length(items) > 0;
 }

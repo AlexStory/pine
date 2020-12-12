@@ -5,5 +5,5 @@
  * @returns {boolean} 
  */
 export function gt(x: number, y: number): boolean {
-    return y > x;
+  return y > x;
 }

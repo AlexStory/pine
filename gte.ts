@@ -5,5 +5,5 @@
  * @returns {boolean}
  */
 export function gte(x: number, y: number): boolean {
-    return y >= x;
+  return y >= x;
 }

@@ -5,6 +5,6 @@ import { add, reduce } from "./mod.ts";
  * @param {number []} list 
  * @returns {number}
  */
-export function sum(list: number []): number {
-    return reduce(add, list);
+export function sum(list: number[]): number {
+  return reduce(add, list);
 }
