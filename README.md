@@ -67,6 +67,16 @@ Returns wether `item` is present in the `list`
 `contains(1, [1, 2, 3]) == true`
 
 
+### curry
+#### `curry(func: Function): Function`
+Retuns a curried version of the functio allowing you to partial apply it
+
+```ts
+const curried = curry(add)
+curried(1)(2) === 3
+```
+
+
 ### dec
 #### `dec(n: number): number`
 Returns one less than `n`
@@ -283,6 +293,19 @@ Returns the smallest item in the `list`
 Returns the opposite of the applied boolean
 
 `not(true) == false`
+
+
+### pipe
+#### `pipe(...fns: Array<(x: any) => any>): ((x: any) => any)`
+Pipes functions together chaining the output of each function into the next
+!! warning: due to Typescript limitations, currently pipe can't guarantee function typing at compile time
+
+```ts
+const addOne = (x) => x + 1
+const double = (x) => x * 2
+const addTwoThenDouble = pipe(addOne, addOne, double)
+addTwoThenDouble(1) === 6
+```
 
 
 ### prop
