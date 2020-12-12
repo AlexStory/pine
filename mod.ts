@@ -3,6 +3,7 @@ export { all } from "./all.ts";
 export { any } from "./any.ts";
 export { chunkEvery } from "./chunkEvery.ts";
 export { clamp } from "./clamp.ts";
+export { comp } from "./comp.ts";
 export { contains } from "./contains.ts";
 export { dec } from "./dec.ts";
 export { enumerate } from "./enumerate.ts";

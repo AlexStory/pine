@@ -48,6 +48,18 @@ Returns a `number` bound between `min` and `max`
 `clamp(0, 10, 20) == 10`
 
 
+### comp
+#### `comp<T, U, V>(first: (T) => U, second: (U) => V): (T) => V`
+Returns a function that is the same as if you took the output from `first` and applied it to `second`
+
+```
+const inc = x => x + 1
+const double = x => x * 2
+const fun = comp(inc, double)
+fun(2) === 6
+```
+
+
 ### contains
 #### `contains<T>(item: T, list: T[]): boolean`
 Returns wether `item` is present in the `list`
