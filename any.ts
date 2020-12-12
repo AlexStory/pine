@@ -7,6 +7,6 @@ import { contains, map } from "./mod.ts";
  * @returns {boolean} 
  */
 export function any<T>(pred: (item: T) => boolean, list: T[]): boolean {
-    const results = map(pred, list);
-    return contains(true, results);
+  const results = map(pred, list);
+  return contains(true, results);
 }

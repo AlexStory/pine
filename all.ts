@@ -7,6 +7,6 @@ import { contains, map } from "./mod.ts";
  * @returns {boolean} wether all items satisfy the predicate
  */
 export function all<T>(pred: (item: T) => boolean, list: T[]): boolean {
-    const results = map(pred, list)
-    return !contains(false, results);
+  const results = map(pred, list);
+  return !contains(false, results);
 }

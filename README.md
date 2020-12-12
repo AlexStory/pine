@@ -48,11 +48,34 @@ Returns a `number` bound between `min` and `max`
 `clamp(0, 10, 20) == 10`
 
 
+### comp
+#### `comp<T, U, V>(first: (T) => U, second: (U) => V): (T) => V`
+Returns a function that is the same as if you took the output from `first` and applied it to `second`
+
+```ts
+const inc = x => x + 1
+const double = x => x * 2
+const fun = comp(inc, double)
+fun(2) === 6
+```
+
+
 ### contains
 #### `contains<T>(item: T, list: T[]): boolean`
 Returns wether `item` is present in the `list`
 
 `contains(1, [1, 2, 3]) == true`
+
+
+### curry
+#### `curry(func: Function): Function`
+Retuns a curried version of the functio allowing you to partial apply it
+!! warning:  curried functions lose their type
+
+```ts
+const curried = curry(add)
+curried(1)(2) === 3
+```
 
 
 ### dec
@@ -273,6 +296,26 @@ Returns the opposite of the applied boolean
 `not(true) == false`
 
 
+### pipe
+#### `pipe(...fns: Array<(x: any) => any>): ((x: any) => any)`
+Pipes functions together chaining the output of each function into the next
+!! warning: currently pipe can't guarantee function typing at compile time
+
+```ts
+const addOne = (x) => x + 1
+const double = (x) => x * 2
+const addTwoThenDouble = pipe(addOne, addOne, double)
+addTwoThenDouble(1) === 6
+```
+
+
+### prop
+### `prop(prop: string, obj: Record<string, unknown>): unknown`
+Returns the `prop` off of the `object`
+
+`prop('x', {x: 1}) === 1`
+
+
 ### range
 ### `range(start: number, stop: number): number[]`
 Returns an array of numbers from `start` to `stop` inclusive
@@ -306,6 +349,26 @@ Returns the `list` in the reversed order
 Iterates over the `list` in the same way as `fold`, but saves all steps along the way.
 
 `scan(add, 0, [1, 2, 3]) == [0, 1, 3, 6]`
+
+
+### sum
+#### `sum(list: number[]): number`
+Returns the sum of all numbers in `list`
+
+`sum([1, 2, 3]) === 6`
+
+
+### sumby
+#### `sumBy<T>(fn: (item: T) => number, list: T[]): number`
+Returns the sum of applying `fn` to all items in `list`
+
+```ts
+const first = { x: 1};
+const second = { x: 2};
+const third = { x: 3 };
+const list = [first, second, third];
+sumBy(o => o.x, list) === 6
+```
 
 
 ### t
