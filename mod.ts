@@ -45,6 +45,7 @@ export { reduce } from "./reduce.ts";
 export { repeat } from "./repeat.ts";
 export { reverse } from "./reverse.ts";
 export { scan } from "./scan.ts";
+export { sum } from "./sum.ts";
 export { t } from "./t.ts";
 export { tail } from "./tail.ts";
 export { take } from "./take.ts";

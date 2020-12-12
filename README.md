@@ -320,6 +320,13 @@ Iterates over the `list` in the same way as `fold`, but saves all steps along th
 `scan(add, 0, [1, 2, 3]) == [0, 1, 3, 6]`
 
 
+### sum
+#### `sum(list: number[]): number`
+Returns the sum of all numbers in `list`
+
+`sum([1, 2, 3]) === 6`
+
+
 ### t
 ### `t(): boolean`
 Returns true
