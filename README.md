@@ -285,6 +285,13 @@ Returns the opposite of the applied boolean
 `not(true) == false`
 
 
+### prop
+### `prop(prop: string, obj: Record<string, unknown>): unknown`
+Returns the `prop` off of the `object`
+
+`prop('x', {x: 1}) === 1`
+
+
 ### range
 ### `range(start: number, stop: number): number[]`
 Returns an array of numbers from `start` to `stop` inclusive

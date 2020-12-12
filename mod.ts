@@ -40,6 +40,7 @@ export { min } from "./min.ts";
 export { minBy } from "./minBy.ts";
 export { minimum } from "./minimum.ts";
 export { not } from "./not.ts";
+export { prop } from "./prop.ts";
 export { range } from "./range.ts";
 export { reduce } from "./reduce.ts";
 export { repeat } from "./repeat.ts";
