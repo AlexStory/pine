@@ -4,6 +4,6 @@
 * @param {T} y
 * @returns {Boolean}
 */
-export function eq<T> (x: T, y: T): Boolean {
+export function eq<T> (x: T, y: T): boolean {
     return x === y
 }

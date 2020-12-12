@@ -20,6 +20,20 @@ Returns the numbers added together
 `add(2, 3) == 5`
 
 
+### all
+#### `all<T>(pred: (item: T) => boolean, list: T[]): boolean`
+Returns wether all items in `list` return true when applied to the function
+
+`all(x => x > 1, [2, 3, 4]) == true`
+
+
+### any
+#### `any<T>(pred: (item: T) => boolean, list: T[]): boolean`
+Returns wether any item in the `list` returns true when applied to the function
+
+`any(x => x > 1, [0, 1, 2]) == true`
+
+
 ### chunkEvery
 #### `chunkEvery<T>(count: number, list: T[]): T[][]`
 Chunks the list by `count` excess are thrown away
@@ -29,9 +43,16 @@ Chunks the list by `count` excess are thrown away
 
 ### clamp
 #### `clamp(min: number, max: number, value: number): number`
-
+Returns a `number` bound between `min` and `max`
 
 `clamp(0, 10, 20) == 10`
+
+
+### contains
+#### `contains<T>(item: T, list: T[]): boolean`
+Returns wether `item` is present in the `list`
+
+`contains(1, [1, 2, 3]) == true`
 
 
 ### dec
@@ -96,6 +117,13 @@ Returns a frequency table created from the list, in a Map data structure
 `frequencies([1, 1, 2, 2, 2], Map{ 1: 2, 2: 3})`
 
 
+### gt
+#### `gt(x: number, y: number): boolean`
+Returns wether `y` is greater than `x`
+
+`gt(1, 2) === true`
+
+
 ### hasKey
 #### `hasKey(key: keyof any, obj: Object): boolean`
 Returns wether the object has the given key
@@ -111,7 +139,7 @@ Returns the first item in a `list`
 
 
 ### identity
-#### `identity<T>(item: T): T1
+#### `identity<T>(item: T): T1`
 Returns the item passed in
 
 `identity(5) == 5`
@@ -163,6 +191,13 @@ Returns the length of the `list`
 `length([1, 1, 1]) == 3`
 
 
+### lt
+#### `lt(x: number, y: number): boolean`
+Returns wether `y` is less than `x`
+
+`lt(4, 1) === true`
+
+
 ### map
 #### `map<T, U>(fn: T => U, list: T[]): U`
 Applies a function to each item in a list, returning a new list of the results of each call
@@ -189,6 +224,16 @@ Returns the larger of two numbers
 
 `max(2, 4) == 4`
 
+
+### maxBy
+#### `maxBy<T>(fn: (item: T) => number, x: number, y: number): T`
+Returns then larger between `x` and `y` when applied to `fn`
+
+```ts
+const first = { x: 4 };
+const second = { x: 5};
+maxBy(o => o.x, first, second) == second
+```
 
 ### maximum
 #### `max(list: number[]): number`
@@ -218,7 +263,7 @@ minBy(o => o.x, first, second) == first
 #### `minimum(list: number[]): number`
 Returns the smallest item in the `list`
 
-`minimum([1, 2, 3]) == 1
+`minimum([1, 2, 3]) == 1`
 
 
 ### not
