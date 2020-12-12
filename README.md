@@ -52,7 +52,7 @@ Returns a `number` bound between `min` and `max`
 #### `comp<T, U, V>(first: (T) => U, second: (U) => V): (T) => V`
 Returns a function that is the same as if you took the output from `first` and applied it to `second`
 
-```
+```ts
 const inc = x => x + 1
 const double = x => x * 2
 const fun = comp(inc, double)
