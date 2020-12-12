@@ -349,6 +349,7 @@ Zips two arrays together into an array of tuples. Extra items from the longer wi
 
 
 ## TODO:
+- pipe/compose
 - more tests
 - automatic currying
 - Option/Result types
