@@ -70,6 +70,7 @@ Returns wether `item` is present in the `list`
 ### curry
 #### `curry(func: Function): Function`
 Retuns a curried version of the functio allowing you to partial apply it
+!! warning:  curried functions lose their type
 
 ```ts
 const curried = curry(add)
@@ -298,7 +299,7 @@ Returns the opposite of the applied boolean
 ### pipe
 #### `pipe(...fns: Array<(x: any) => any>): ((x: any) => any)`
 Pipes functions together chaining the output of each function into the next
-!! warning: due to Typescript limitations, currently pipe can't guarantee function typing at compile time
+!! warning: currently pipe can't guarantee function typing at compile time
 
 ```ts
 const addOne = (x) => x + 1
