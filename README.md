@@ -4,7 +4,9 @@ Utility library for deno with an FP bent.
 
 You should be able to pull all functions straight from mod like `import { take } from "https://deno.land/x/pine/mod.ts"`
 
-I highly recommend looking at the test file for a function to see how to use it.
+You can get the curried version of any function that takes more than one argument by importing it from mod.curried.ts instead.
+
+I highly recommend looking at the test file for a function to see how to use it. ex: `import { take } from "https://deno.land/x/pine/mod.curried.ts"`
 
 ## stability
 Most of the api should be pretty stable, but for now I would pin a version as I am planning to rewrite some of the function implementations, and add things like automatic currying.
