@@ -5,5 +5,5 @@
  * 
  */
 export function prop(prop: string, obj: Record<string, unknown>): unknown {
-    return obj[prop];
+  return obj[prop];
 }

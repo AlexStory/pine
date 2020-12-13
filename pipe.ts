@@ -7,5 +7,5 @@ import { reduce } from "./mod.ts";
  */
 // deno-lint-ignore no-explicit-any
 export function pipe(...fns: Array<(x: any) => any>): ((x: any) => any) {
-    return reduce((prev, next) => val => next(prev(val)) , fns)
+  return reduce((prev, next) => (val) => next(prev(val)), fns);
 }
