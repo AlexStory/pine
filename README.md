@@ -1,6 +1,6 @@
 # pine 🍍
 
-Utility library for deno with an FP bent.
+Utility library for deno with a FP bent.
 
 You should be able to pull all functions straight from mod like `import { take } from "https://deno.land/x/pine/mod.ts"`
 
@@ -26,14 +26,14 @@ Returns the numbers added together
 
 ### all
 #### `all<T>(pred: (item: T) => boolean, list: T[]): boolean`
-Returns wether all items in `list` return true when applied to the function
+Returns whether all items in `list` return true when applied to the function
 
 `all(x => x > 1, [2, 3, 4]) == true`
 
 
 ### any
 #### `any<T>(pred: (item: T) => boolean, list: T[]): boolean`
-Returns wether any item in the `list` returns true when applied to the function
+Returns whether any item in the `list` returns true when applied to the function
 
 `any(x => x > 1, [0, 1, 2]) == true`
 
@@ -42,7 +42,7 @@ Returns wether any item in the `list` returns true when applied to the function
 #### `chunkEvery<T>(count: number, list: T[]): T[][]`
 Chunks the list by `count` excess are thrown away
 
-`chunkEvery(2, [1, 2, 3, 4, 5]) == [[1, 2], [3, 4]]
+`chunkEvery(2, [1, 2, 3, 4, 5]) == [[1, 2], [3, 4]]`
 
 
 ### clamp
@@ -54,7 +54,7 @@ Returns a `number` bound between `min` and `max`
 
 ### comp
 #### `comp<T, U, V>(first: (T) => U, second: (U) => V): (T) => V`
-Returns a function that is the same as if you took the output from `first` and applied it to `second`
+Returns a function that is the same as if you took the output from `first` and then applied it to `second`
 
 ```ts
 const inc = x => x + 1
@@ -66,14 +66,14 @@ fun(2) === 6
 
 ### contains
 #### `contains<T>(item: T, list: T[]): boolean`
-Returns wether `item` is present in the `list`
+Returns whether an `item` is present in the `list`
 
 `contains(1, [1, 2, 3]) == true`
 
 
 ### curry
 #### `curry(func: Function): Function`
-Retuns a curried version of the functio allowing you to partial apply it
+Retuns a curried version of the function allowing you to partial apply it
 !! warning:  curried functions lose their type
 
 ```ts
